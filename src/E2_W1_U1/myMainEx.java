@@ -16,6 +16,12 @@ public class myMainEx {
 		
 		// Task 3 Exercise 1 - Calling a static function that return all data of two differents rectangles and sum Area & Perimeter of both
 		Rectangle.meltTwoRectangles(rectangle_A, rectangle_B);
+		
+		// Task 1 Exercise 2 - Creating a constructor to build a SIM
+		SIM sim_1 = new SIM("3274568094");
+		
+		// Task 2 Exercise 2 - Print in console data of a specific SIM passed as parameter
+		SIM.getSimInfo(sim_1);
 	}
 
 }
