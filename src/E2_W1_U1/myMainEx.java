@@ -1,7 +1,11 @@
 package E2_W1_U1;
 
+import java.util.Scanner;
+
 public class myMainEx {
 
+	static Scanner myScan = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 		// Task 1 Exercise 1 - creating 2 rectangles and calling their methods to calculate Area & Perimeter
 		Rectangle rectangle_A = new Rectangle(4.15, 8.9);
@@ -22,6 +26,9 @@ public class myMainEx {
 		
 		// Task 2 Exercise 2 - Print in console data of a specific SIM passed as parameter
 		SIM.getSimInfo(sim_1);
+		
+		// Task 1 Exercise 3 - Create a product for a e-commerce
+		
 	}
 
 }
