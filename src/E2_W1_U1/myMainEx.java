@@ -27,8 +27,23 @@ public class myMainEx {
 		// Task 2 Exercise 2 - Print in console data of a specific SIM passed as parameter
 		SIM.getSimInfo(sim_1);
 		
-		// Task 1 Exercise 3 - Create a product for a e-commerce
+		// Task 1 Exercise 3 - Create a Client for a e-commerce with Scanner
+		//Client user = new Client();
+		//Client.printClientData(user);
 		
+		// Exercise 3 - Create a Client for a e-commerce with parameter
+		Client user1 = new Client("Giorgio", "Rossi", "Giorgione@yahoo.it", "13/03/23");
+		// Exercise 3 - Printing all data of parameter USER
+		Client.printClientData(user1);
+		// Exercise 3 - Creating E-commerce 
+		E_commerce eco = new E_commerce();
+		// Exercise 3 - Adding products to e-commerce eco stock
+		eco.addNewProduct("Pencil", 0.90, 45);
+		eco.addNewProduct("Pen", 1.10, 100);
+		eco.addNewProduct("Scissors", 3.30, 25);
+		eco.addNewProduct("Paper", 2.15, 38);
+		
+		eco.printAllProduct();
 	}
 
 }

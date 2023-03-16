@@ -7,30 +7,35 @@ public class Product {
 	int upperBound = 19999;
 	Random rand = new Random();
 	String description;
-	String price;
+	double price;
 	int availability;
 	
-	public Product(String desc, double p, int av ) {
+	private Product() {
+		System.out.println("Product added to the stock!");
 		productID = rand.nextInt(upperBound);
+	}
+	
+	public Product(String desc, double p, int available) {
+		this();
 		description = desc;
-		price = Double.toString(p) + "€";
-		availability = av;
+		price = p;
+		availability = available;	
 	}
 	
 	public int getProductID() {
 		return productID;
 	}
 	
-	public String getProductPrice() {
+	public double getProductPrice() {
 		return price;
 	}
 	
 	public static void printProductInfo(Product p) {
-		System.out.print("Product data: ");
+		System.out.println("Product data: ");
 		System.out.print("ID -> " + p.productID + ", ");
 		System.out.print("Description -> " + p.description + ", ");
-		System.out.print("Price -> " + p.price + ", ");
-		System.out.print("Availability -> " + p.availability);
+		System.out.print("Price -> " + p.price + "€, ");
+		System.out.println("Availability -> " + p.availability);
 		
 	}
 }

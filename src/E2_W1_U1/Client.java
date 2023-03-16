@@ -10,6 +10,13 @@ public class Client {
 	private String clientEmail;
 	private String signInDate;
 
+	public Client() {
+		clientID = rand.nextInt(upperBound);
+		name_Surname = setName_Surname();
+		clientEmail = setEmail();
+		signInDate = setSignIn();
+	}
+	
 	public Client(String name, String surname, String email, String date) {
 		clientID = rand.nextInt(upperBound);
 		name_Surname = setName_Surname(name, surname);
@@ -17,11 +24,30 @@ public class Client {
 		signInDate = date;
 	}
 	
+	private String[] setName_Surname() {
+		name_Surname = new String[2];
+		System.out.println("Insert your name:");
+		name_Surname[0] = myMainEx.myScan.nextLine();
+		System.out.println("Insert your surname:");
+		name_Surname[1] = myMainEx.myScan.nextLine();
+		return name_Surname;
+	}
+	
 	private String[] setName_Surname(String n, String s) {
 		name_Surname = new String[2];
 		name_Surname[0] = n;
 		name_Surname[1] = s;
 		return name_Surname;
+	}
+	
+	private String setEmail() {
+		System.out.println("Insert email:");
+		return myMainEx.myScan.nextLine();
+	}
+	
+	private String setSignIn() {
+		System.out.println("Insert date as dd/mm/yy:");
+		return myMainEx.myScan.nextLine();
 	}
 	
 	public static void printClientData(Client c) {
